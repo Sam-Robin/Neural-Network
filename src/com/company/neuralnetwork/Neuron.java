@@ -17,11 +17,6 @@ public class Neuron {
         outputConnections = new ArrayList<>();
     }
 
-    public void sum()
-    {
-        //TODO: Sum all input connections, using sigmoid
-    }
-
     /**
      * Returns a value between 0 and 1 based on the value of x.
      * A value of x at -inf will give 0, and a value of inf at 1.

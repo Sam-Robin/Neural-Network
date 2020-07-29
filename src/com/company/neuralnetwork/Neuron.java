@@ -1,18 +1,18 @@
 package com.company.neuralnetwork;
 
+import com.company.neuralnetwork.connections.Connection;
+
 import java.util.ArrayList;
 
 public class Neuron {
 
     private double value;
-    private String id;
     private ArrayList<Connection> inputConnections;
     private ArrayList<Connection> outputConnections;
 
     public Neuron()
     {
         value = 0;
-        id = null;
         inputConnections = new ArrayList<>();
         outputConnections = new ArrayList<>();
     }
@@ -28,5 +28,9 @@ public class Neuron {
         double y;
         y = 1 / (1 + Math.exp(-x));
         return y;
+    }
+
+    public double getValue() {
+        return sigmoid(value);
     }
 }

@@ -17,4 +17,13 @@ public class NeuralNetwork {
         this.outputLayer = outputLayer;
     }
 
+    public void input(String dataType, String location)
+    {
+
+    }
+
+    public double[] output()
+    {
+        return null;
+    }
 }

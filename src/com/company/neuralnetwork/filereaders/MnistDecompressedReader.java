@@ -17,13 +17,15 @@ import java.util.function.Consumer;
  */
 public class MnistDecompressedReader
 {
+
     /**
      * Default constructor
      */
     public MnistDecompressedReader()
     {
-        // Default constructor
+
     }
+
 
     /**
      * Read the MNIST training data from the given directory. The data is
@@ -41,8 +43,8 @@ public class MnistDecompressedReader
     public void readDecompressedTraining(Path inputDirectoryPath,
                                          Consumer<? super MnistEntry> consumer) throws IOException
     {
-        String trainImagesFileName = "train-images.idx3-ubyte";
-        String trainLabelsFileName = "train-labels.idx1-ubyte";
+        String trainImagesFileName = "t10k-images.idx3-ubyte";
+        String trainLabelsFileName = "t10k-labels.idx1-ubyte";
         Path imagesFilePath = inputDirectoryPath.resolve(trainImagesFileName);
         Path labelsFilePath = inputDirectoryPath.resolve(trainLabelsFileName);
         readDecompressed(imagesFilePath, labelsFilePath, consumer);

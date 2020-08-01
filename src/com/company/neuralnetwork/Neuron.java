@@ -21,7 +21,7 @@ public class Neuron {
      * Returns a value between 0 and 1 based on the value of x.
      * A value of x at -inf will give 0, and a value of inf at 1.
      * @param x     x input for sigmoid function
-     * @return y    y output of sigmoid function
+     * @return      y output of sigmoid function
      */
     public double sigmoid(double x)
     {
@@ -30,6 +30,10 @@ public class Neuron {
         return y;
     }
 
+    /**
+     * Return post-sigmoid value
+     * @return  sigmoid output
+     */
     public double getValue() {
         return sigmoid(value);
     }

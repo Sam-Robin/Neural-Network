@@ -31,6 +31,20 @@ public class NeuralNetLayer {
 
     public double[] getNeuronOutputs()
     {
-        return null;
+        //create array to be returned
+        double[] outputs = new double[]{};
+        int num = 0;
+
+        //get all the neurons' values
+        for(Neuron n : neurons)
+        {
+            //assign sigmoid output of neuron to array
+            outputs[num] = n.getValue();
+            num++;
+        }
+
+        return outputs;
     }
+
+    public List<Neuron> getNeurons() { return neurons; }
 }

@@ -10,9 +10,23 @@ public class Neuron {
     private ArrayList<Connection> inputConnections;
     private ArrayList<Connection> outputConnections;
 
+    /**
+     * Default constructor
+     */
     public Neuron()
     {
         value = 0;
+        inputConnections = new ArrayList<>();
+        outputConnections = new ArrayList<>();
+    }
+
+    /**
+     * Create a neuron with a specific value
+     * @param value     raw value
+     */
+    public Neuron(double value)
+    {
+        this.value = value;
         inputConnections = new ArrayList<>();
         outputConnections = new ArrayList<>();
     }

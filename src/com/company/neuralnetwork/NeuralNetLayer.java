@@ -29,17 +29,17 @@ public class NeuralNetLayer {
         }
     }
 
-    public double[] getNeuronOutputs()
+    public ArrayList<Double> getNeuronOutputs()
     {
         //create array to be returned
-        double[] outputs = new double[]{};
+        ArrayList<Double> outputs = new ArrayList<>();
         int num = 0;
 
         //get all the neurons' values
         for(Neuron n : neurons)
         {
             //assign sigmoid output of neuron to array
-            outputs[num] = n.getValue();
+            outputs.add(n.getValue());
             num++;
         }
 
